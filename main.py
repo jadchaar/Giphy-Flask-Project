@@ -7,21 +7,16 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         text = request.form['inputText']
+        # Changes spaces to dashes
+        if text.find(" ") != -1:
+            text = text.replace(" ", "-")
+        # Checks if blank string is inputted
+        if not text:
+            # display error to re input string
         giphyURL = translate_gif(text)
-        # return render_template("form-action.html", giphy=giphyURL)
         return render_template("form.html", giphy=giphyURL)
-        # session['gif'] = giphyURL
     else:
-        # finalURL = session['gif']
         return render_template("form.html")
-
-# @app.route('/', methods=['POST'])
-# def index_post():
-#     text = request.form['inputText']
-#     giphyURL = translate_gif(text)
-#     # return render_template("form-action.html", giphy=giphyURL)
-#     session['giphyURL'] = giphyURL
-#     return giphyURL
 
 if __name__ == "__main__":
     app.run(debug=True)
