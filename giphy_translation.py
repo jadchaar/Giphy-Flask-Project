@@ -9,5 +9,7 @@ def translate_gif(text):
 
     data = json.loads(urlopen(finalURL).read().decode('utf-8'))
 
-    # return data["data"]["bitly_gif_url"]
-    return data["data"]["images"]["fixed_height"]["url"]
+    dataArray = [data["data"]["images"]["fixed_height"]["url"], data["data"]["url"]]
+
+    # return data["data"]["images"]["fixed_height"]["url"]
+    return dataArray

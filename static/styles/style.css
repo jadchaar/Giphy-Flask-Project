@@ -27,5 +27,31 @@ body {
 }
 
 #error-message {
-  color: red;
+    color: red;
+}
+
+main {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer img {
+    padding-top: 2em;
+    width: 50%;
+}
+
+@media only screen and (max-width:768px) {
+    main {
+        width: 100%!important;
+    }
+    footer img {
+        width: 100%!important;
+    }
 }
