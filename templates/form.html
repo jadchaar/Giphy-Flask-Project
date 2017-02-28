@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>WebFontConfig={google:{families:["Open Sans:400,700"]}};(function(a){var b=a.createElement("script");a=a.scripts[0];b.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";a.parentNode.insertBefore(b,a)})(document);</script>
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{url_for('static', filename='styles/style.min.css')}}" rel="stylesheet">
 </head>
@@ -25,12 +27,18 @@
         <div class="container-fluid">
             <form action="/" method="POST">
                 <div class="form-group">
-                    <label for="inputText">Gif you want to view</label>
+                    <!-- <label for="inputText">Gif you want to view</label> -->
                     <input type="text" class="form-control input-lg" id="inputText" name="inputText" placeholder="Any word works!">
                 </div>
-                <!-- <button type="submit" class="btn btn-default btn-lg" name="my-form" value="random">Random</button>
-                <button type="submit" class="btn btn-default btn-lg" name="my-form" value="submitText">Submit</button> -->
-                <button type="submit" class="btn btn-default btn-lg" name="my-form" value="Send">Submit</button>
+                <button type="submit" class="btn btn-default btn-lg" name="textInput" value="Send">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Generate GIF from Text
+                </button>
+
+                <h3 id="orSeperator">&#8212;OR&#8212;</h3>
+
+                <button type="submit" class="btn btn-default btn-lg" name="random" value="Send">
+                  <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>&nbsp;Random GIF
+                </button>
             </form>
 
             <hr />

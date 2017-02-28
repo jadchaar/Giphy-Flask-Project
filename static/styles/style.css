@@ -1,4 +1,5 @@
 body {
+    font-family: 'Open Sans', sans-serif;
     -moz-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: auto;
@@ -54,4 +55,9 @@ footer img {
     footer img {
         width: 100%!important;
     }
+}
+
+#orSeperator {
+    margin: 5px!important;
+    padding: 5px!important;
 }
