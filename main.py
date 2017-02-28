@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, Markup
 from giphy_translation import translate_gif
+from giphy_random import random_gif
 
 app = Flask(__name__)
 
