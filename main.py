@@ -18,6 +18,8 @@ def index():
             text = text.strip()
             if text.find(" ") != -1:
                 text = text.replace(" ", "-")
+            # DEBUGGING
+            return render_template("form.html", text=text)
 
             # Checks if blank string is inputted
             if not text:

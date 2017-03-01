@@ -19,8 +19,7 @@
             a.parentNode.insertBefore(b, a)
         })(document);
     </script>
-
-    <link href="{{url_for('static', filename='styles/normalize.min.css')}}" rel="stylesheet">
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{url_for('static', filename='styles/style.min.css')}}" rel="stylesheet">
 
@@ -41,7 +40,7 @@
     </nav>
     <main>
         <div class="container-fluid">
-            <form action="/" method="POST">
+            <form action="#" method="POST">
                 <div class="form-group">
                     <input type="text" class="hidden-xs visible-sm-* visible-md-* visible-lg-* form-control input-lg" name="inputText" placeholder="Any word works!" autofocus>
                     <input type="text" class="visible-xs-* hidden-sm hidden-md hidden-lg btn-group form-control" name="inputText" placeholder="Any word works!">
@@ -59,6 +58,8 @@
             </form>
 
             <hr />
+
+            <h3>Text input: {{text}}</h3>
 
             <h3 id='error-message'>{{error}}</h3>
             <a href="{{source}}" target="_blank" rel="noopener noreferrer">
