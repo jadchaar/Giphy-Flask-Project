@@ -5,7 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script>WebFontConfig={google:{families:["Open Sans:400,700"]}};(function(a){var b=a.createElement("script");a=a.scripts[0];b.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";a.parentNode.insertBefore(b,a)})(document);</script>
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ["Open Sans:400,700"]
+            }
+        };
+        (function(a) {
+            var b = a.createElement("script");
+            a = a.scripts[0];
+            b.src = "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+            a.parentNode.insertBefore(b, a)
+        })(document);
+    </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{url_for('static', filename='styles/style.min.css')}}" rel="stylesheet">
@@ -27,18 +39,19 @@
         <div class="container-fluid">
             <form action="/" method="POST">
                 <div class="form-group">
-                    <!-- <label for="inputText">Gif you want to view</label> -->
-                    <input type="text" class="form-control input-lg" id="inputText" name="inputText" placeholder="Any word works!">
+                    <input type="text" class="hidden-xs visible-sm-* visible-md-* visible-lg-* form-control input-lg" name="inputText" placeholder="Any word works!">
+                    <input type="text" class="visible-xs-* hidden-sm hidden-md hidden-lg btn-group form-control" name="inputText" placeholder="Any word works!">
                 </div>
-                <button type="submit" class="btn btn-default btn-lg" name="textInput" value="Send">
-                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Generate GIF from Text
-                </button>
 
-                <h3 id="orSeperator">&#8212;OR&#8212;</h3>
+                <div class="hidden-xs visible-sm-* visible-md-* visible-lg-* btn-group">
+                    <button type="submit" class="btn btn-default btn-lg" name="textInput" value="Send"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Generate GIF from Text</button>
+                    <button type="submit" class="btn btn-default btn-lg" name="random" value="Send"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>&nbsp;Random GIF</button>
+                </div>
 
-                <button type="submit" class="btn btn-default btn-lg" name="random" value="Send">
-                  <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>&nbsp;Random GIF
-                </button>
+                <div class="visible-xs-* hidden-sm hidden-md hidden-lg btn-group">
+                    <button type="submit" class="btn btn-default" name="textInput" value="Send"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Generate GIF from Text</button>
+                    <button type="submit" class="btn btn-default" name="random" value="Send"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>&nbsp;Random GIF</button>
+                </div>
             </form>
 
             <hr />

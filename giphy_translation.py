@@ -1,6 +1,5 @@
 from urllib.request import urlopen
-import json
-import webbrowser
+import json, sys
 
 def translate_gif(text):
     publicKey = "dc6zaTOxFJmzC"
@@ -9,7 +8,6 @@ def translate_gif(text):
 
     data = json.loads(urlopen(finalURL).read().decode('utf-8'))
 
-    # dataArray = [data["data"]["images"]["fixed_height"]["url"], data["data"]["url"]]
     dataArray = [data["data"]["images"]["original"]["url"], data["data"]["url"]]
 
     return dataArray

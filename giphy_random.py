@@ -1,6 +1,5 @@
 from urllib.request import urlopen
 import json
-import webbrowser
 
 def random_gif():
     publicKey = "dc6zaTOxFJmzC"
