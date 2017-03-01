@@ -22,9 +22,6 @@ def index():
             if text.find(" ") != -1:
                 text = text.replace(" ", "-")
 
-            # Debugging purposes
-            return render_template("form.html", text=text)
-
             # Checks if blank string is inputted
             if text == "":
                 error = "\u26A0\uFE0F Text input invalid, please try another."
@@ -47,5 +44,5 @@ def index():
         return render_template("form.html", giphy=giphyURL, source=source)
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    # app.run()
+    # app.run(debug=True)
+    app.run()
