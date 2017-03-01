@@ -21,12 +21,19 @@ def index():
 
             # Checks if blank string is inputted
             if not text:
-                error = "Please input a valid gif name \U0001F642"
+                error = "\u26A0\uFE0F Text input invalid, please try another."
                 giphyURL = "https://media1.giphy.com/media/13NRvWtOiMXawM/200.gif"
                 source = "https://giphy.com/gifs/things-13NRvWtOiMXawM"
                 return render_template("form.html", giphy=giphyURL, error=error, source=source)
             else:
-                giphyURL = translate_gif(text)
+                # giphyURL = translate_gif(text)
+                try:
+                    giphyURL = translate_gif(text)
+                except:
+                    error = "\u26A0\uFE0F No GIFs found, please try another input."
+                    giphyURL = "https://media1.giphy.com/media/13NRvWtOiMXawM/200.gif"
+                    source = "https://giphy.com/gifs/things-13NRvWtOiMXawM"
+                    return render_template("form.html", giphy=giphyURL, error=error, source=source)
                 return render_template("form.html", giphy=giphyURL[0], source=giphyURL[1])
     else:
         # Default welcome gif is loaded

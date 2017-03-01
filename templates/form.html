@@ -39,8 +39,8 @@
         <div class="container-fluid">
             <form action="/" method="POST">
                 <div class="form-group">
-                    <input type="text" class="hidden-xs visible-sm-* visible-md-* visible-lg-* form-control input-lg" name="inputText" placeholder="Any word works!">
-                    <input type="text" class="visible-xs-* hidden-sm hidden-md hidden-lg btn-group form-control" name="inputText" placeholder="Any word works!">
+                    <input type="text" class="hidden-xs visible-sm-* visible-md-* visible-lg-* form-control input-lg" name="inputText" placeholder="Any word works!" autofocus>
+                    <input type="text" class="visible-xs-* hidden-sm hidden-md hidden-lg btn-group form-control" name="inputText" placeholder="Any word works!" autofocus>
                 </div>
 
                 <div class="hidden-xs visible-sm-* visible-md-* visible-lg-* btn-group">
@@ -56,7 +56,7 @@
 
             <hr />
 
-            <h2 id='error-message'>{{error}}</h2>
+            <h3 id='error-message'>{{error}}</h3>
             <a href="{{source}}" target="_blank" rel="noopener noreferrer">
                 <img src="{{giphy}}" width="100%" class="center-block">
             </a>
