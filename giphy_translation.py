@@ -10,10 +10,4 @@ def translate_gif(text):
 
     dataArray = [data["data"]["images"]["original"]["url"], data["data"]["url"]]
 
-    # Handle errors when data is not found
-    # try:
-    #     dataArray = [data["data"]["images"]["original"]["url"], data["data"]["url"]]
-    # except TypeError as e:
-    #     return error
-
     return dataArray
