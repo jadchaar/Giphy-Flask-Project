@@ -17,10 +17,8 @@ def index():
             else:
                 text = request.form["inputText"]
 
-            # Changes spaces to dashes
-            text = text.strip()
-            if text.find(" ") != -1:
-                text = text.replace(" ", "-")
+            # Removes excess whitespaces and changes spaces to dashes
+            text = " ".join(text.split()).replace(" ", "-")
 
             # Checks if blank string is inputted
             if text == "":
