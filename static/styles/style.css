@@ -28,7 +28,7 @@ body {
 }
 
 #error-message {
-    color: #bd1b1b;
+    color: #de1f1f;
 }
 
 main {
@@ -43,7 +43,7 @@ footer {
 }
 
 footer img {
-    width: 25%;
+    width: 40%;
 }
 
 footer p {
