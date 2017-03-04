@@ -1,6 +1,7 @@
 from urllib.request import urlopen
 import json
 
+
 def random_gif():
     publicKey = "dc6zaTOxFJmzC"
     finalURL = "https://api.giphy.com/v1/gifs/random?api_key=" + publicKey
